@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Javascript Form Validation</title>
+		<link rel="stylesheet" type="text/css" href="css/jscript-css.css">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/2.0.0-rc.1/flatpickr.dark.min.css">
+		<script src="js/jscript-js.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/2.0.0-rc.1/flatpickr.js"></script>
+	</head>
+	<body>
+		<div>
+			<div class="page-title">Form validation</div>
+			<div class="forms">
+				<form name="cwForm" action="">
+					<table>
+						<tr>
+							<td><label for="firstName">First Name</label></td>
+							<td>
+								<input type="text" id="firstName" name="firstName" onblur="checkFname()">
+								<span id="firstNameMsg" class="display-block"></span>							
+							</td>
+						</tr>
+						<tr>
+							<td><label for="lastName">Last Name</label></td>
+							<td>
+								<input type="text" id="lastName" name="name" onblur="checklname()">
+								<span id="lastNameMsg" class="display-block"></span>					
+							</td>
+						</tr>
+						<tr>
+							<td><label for="myEmail">Email</label></td>
+							<td>
+								<input type="email" id="myEmail" name="myEmail" onblur="checkEmail()">
+								<span id="emailmsg" class="display-block"></span>							
+							</td>
+						</tr>	
+						<tr>
+							<td><label for="myPhone">Phone</label></td>
+							<td>
+								<input type="text" id="myPhone" name="myPhone" onblur="checkPhone()">
+								<span id="phoneMsg" class="display-block"></span>							
+							</td>
+						</tr>	
+						<tr>
+							<td><label for="valcheckBox">CheckBox</label></td>
+							<td >
+								<input type="checkbox" id="valcheckBox" name="valcheckBox1" value="1" />
+									Check One <span class="display-block"></span>
+								<input type="checkbox" id="valcheckBox" name="valcheckBox2" value="2"/>
+									Check two <span class="display-block"></span>
+								<input type="checkbox" id="valcheckBox" name="valcheckBox3" value="3"/>
+									Check three <span class="display-block"></span>
+							</td>
+						</tr>
+						<tr>
+							<td><span id="checkboxMsg" class="display-block"></span></td>
+						</tr>
+						<tr>
+							<td><label for="valFile">File</label></td>
+							<td>
+								<input type="file" id="valFile" name="valFile"  onchange="validate_fileupload(this.value);">
+								<span id="fileMsg" class="display-block"></span>						
+							</td>							
+						</tr>
+						<tr>
+							<td><label for="valUrl">URL</label></td>
+							<td>
+								<input type="text" id="valUrl" name="valUrl" onblur="urlCheck()">
+								<span id="urlMsg" class="display-block"></span>							
+							</td>						
+						</tr>
+						<tr>
+							<td><label for="valRadio">Radio</label></td>
+							<td>
+							<input type="radio" name="gender" value="male"> Male<span class="display-block"></span>
+							<input type="radio" name="gender" value="female"> Female<span class="display-block"></span>
+							<input type="radio" name="gender" value="other"> Other						
+						</tr>
+						<tr>
+							<td><span id="radioMsg" class="display-block"></span>	</td>
+						</tr>
+						<tr>
+							<td><label for="select_box">SelectBox</label></td></td>
+							<td>
+								<select id="select_box" name="select_box" onchange="selectValidate()">
+									<option value="">Choose an option</option>
+									<option value="Tamilnadu">Tamilnadu</option>
+									<option value="Kerla">Kerla</option>
+									<option value="Bangalore">Bangalore</option>
+								</select>
+								<span id="selectMsg" class="display-block"></span>							
+							</td>
+						</tr>
+						<tr>
+							<td><label for="msgTarea">TextArea</label></td>
+							<td>
+								<textarea id="msgTarea" name="msgTarea" onblur="checkTextarea()"></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td><span id="tAreaMsg" class="display-block"></span></td>
+						</tr>
+						<tr>
+							<td>
+								<input type ="button" value ="preview" onClick = "previewform()">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>			
+		</div>
+		
+		<div>
+			<p id="showFname"></p>
+			<p id="showLname"></p>
+			<p id="showEmail"></p>
+			<p id="showPhone"></p>
+			<p id="showURL"></p>
+			<p id="showArea"></p>
+		</div>
+	</body>
+</html>
